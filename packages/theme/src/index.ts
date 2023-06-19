@@ -1,4 +1,4 @@
 // export * from './GlobalStyles';
 export * from './darkTheme';
-export * from './defaultTheme';
+export * from './lightTheme';
 export * from './hook/useTheme';

@@ -1,8 +1,8 @@
-/* eslint-disable no-unused-vars */
 import styled, { css } from 'styled-components';
 import { Button as ButtonMUI } from '@mui/material';
 
 declare module '@mui/material/Button' {
+  // eslint-disable-next-line no-unused-vars
   interface ButtonPropsVariantOverrides {
     text: true;
     primary: true;
@@ -17,6 +17,7 @@ export const Button = styled(ButtonMUI)`
     && {
       text-transform: none;
       border-radius: 12px;
+      font-family: ${theme.fonts.default};
 
       ${variant === 'primary' &&
       css`

@@ -8,8 +8,8 @@ import {
   space,
 } from '@super-ui/tokens';
 
-export const defaultTheme = {
-  title: 'defaultTheme',
+export const lightTheme = {
+  title: 'lightTheme',
 
   colors,
   fonts,

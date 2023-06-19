@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-empty-interface */
 import 'styled-components';
-import { ThemeDarkLightProps } from '..';
+import { DefaultThemeProps } from '..';
 
 declare module 'styled-components' {
-  export interface DefaultTheme extends ThemeDarkLightProps {}
+  export interface DefaultTheme extends DefaultThemeProps {}
 }

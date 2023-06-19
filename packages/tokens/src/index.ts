@@ -1,5 +1,4 @@
 export * from './colors';
-export * from './dark-colors';
 export * from './space';
 export * from './radii';
 export * from './fonts';

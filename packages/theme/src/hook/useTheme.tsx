@@ -1,37 +1,43 @@
 import { createContext, ReactNode, useContext, useState } from 'react';
-import { ThemeProvider as StyledProvider } from 'styled-components';
-import { defaultTheme, darkTheme } from '..';
+import { ThemeProvider } from 'styled-components';
+import { lightTheme, darkTheme } from '..';
 
-export type DefaultThemeProps = typeof defaultTheme;
+export type LightThemeProps = typeof lightTheme;
 export type DarkThemeProps = typeof darkTheme;
 
-export type ThemeDarkLightProps = DefaultThemeProps | DarkThemeProps;
+export type DefaultThemeProps = LightThemeProps | DarkThemeProps;
 
 interface IThemeContext {
   toggleTheme: () => void;
-  theme: ThemeDarkLightProps;
+  theme: DefaultThemeProps;
 }
 
 export const ThemeContext = createContext({} as IThemeContext);
 
-interface ThemeProviderProps {
+interface SuperThemeProviderProps {
   children: ReactNode;
-  customTheme?: ThemeDarkLightProps;
+  dark?: DarkThemeProps;
+  light?: LightThemeProps;
 }
 
-export function ThemeProvider({ children, customTheme }: ThemeProviderProps) {
-  const [theme, setTheme] = useState<ThemeDarkLightProps>(defaultTheme);
+export function SuperThemeProvider({
+  children,
+  dark,
+  light,
+}: SuperThemeProviderProps) {
+  const currentDark = dark || darkTheme;
+  const currentLight = light || lightTheme;
 
-  const currentTheme = customTheme || theme;
+  const [theme, setTheme] = useState<DefaultThemeProps>(currentLight);
 
   function toggleTheme() {
-    setTheme(currentTheme.title === 'defaultTheme' ? darkTheme : defaultTheme);
-    console.log(currentTheme.title);
+    setTheme(theme.title === 'lightTheme' ? currentDark : currentLight);
+    console.log(theme.title);
   }
 
   return (
     <ThemeContext.Provider value={{ toggleTheme, theme }}>
-      <StyledProvider theme={currentTheme}>{children}</StyledProvider>
+      <ThemeProvider theme={theme}>{children}</ThemeProvider>
     </ThemeContext.Provider>
   );
 }
