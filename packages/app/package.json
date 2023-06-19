@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
+    "dev-app": "vite",
+    "build-app": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
@@ -15,10 +15,10 @@
     "styled-components": "^5.3.10"
   },
   "devDependencies": {
-    "@super-ui/eslint-config": "*",
-    "@super-ui/react": "*",
-    "@super-ui/theme": "*",
-    "@super-ui/tokens": "*",
+    "@super-ds/eslint-config": "*",
+    "@super-ds/react": "*",
+    "@super-ds/theme": "*",
+    "@super-ds/tokens": "*",
     "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11",
     "@types/styled-components": "^5.1.26",
