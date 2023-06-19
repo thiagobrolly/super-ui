@@ -6,7 +6,7 @@ import {
   lineHeights,
   radii,
   space,
-} from '@super-ui/tokens';
+} from '@super-ds/tokens';
 
 export const lightTheme = {
   title: 'lightTheme',

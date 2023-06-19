@@ -1,5 +1,5 @@
 {
-  "name": "@super-ui/theme",
+  "name": "@super-ds/theme",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -14,9 +14,9 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@super-ui/eslint-config": "*",
-    "@super-ui/tokens": "*",
-    "@super-ui/ts-config": "*",
+    "@super-ds/eslint-config": "*",
+    "@super-ds/tokens": "*",
+    "@super-ds/ts-config": "*",
     "@types/react": "^18.2.12",
     "@types/react-dom": "^18.2.5",
     "@types/styled-components": "^5.1.26",

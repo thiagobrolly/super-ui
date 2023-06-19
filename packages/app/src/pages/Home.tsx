@@ -1,5 +1,5 @@
-import { Button } from '@super-ui/react';
-import { useTheme } from '@super-ui/theme';
+import { Button } from '@super-ds/react';
+import { useTheme } from '@super-ds/theme';
 
 export function Home() {
   const { toggleTheme } = useTheme();

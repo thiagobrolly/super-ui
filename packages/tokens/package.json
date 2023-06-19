@@ -1,5 +1,5 @@
 {
-  "name": "@super-ui/tokens",
+  "name": "@super-ds/tokens",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -14,8 +14,8 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@super-ui/eslint-config": "*",
-    "@super-ui/ts-config": "*",
+    "@super-ds/eslint-config": "*",
+    "@super-ds/ts-config": "*",
     "tsup": "^7.0.0",
     "typescript": "^5.1.3"
   }

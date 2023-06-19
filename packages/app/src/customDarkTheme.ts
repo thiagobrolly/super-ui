@@ -1,4 +1,4 @@
-import { darkTheme } from '@super-ui/theme';
+import { darkTheme } from '@super-ds/theme';
 
 export const customDarkTheme = {
   ...darkTheme,
