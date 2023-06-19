@@ -28,4 +28,4 @@ export const colors = {
   gray700: '#4D4D4D',
   gray800: '#333333',
   gray900: '#1A1A1A',
-}
+} as const;
