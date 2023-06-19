@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import styled, { css } from 'styled-components';
 import { Button as ButtonMUI } from '@mui/material';
-import { colors } from '@super-ui/tokens';
 
 declare module '@mui/material/Button' {
   interface ButtonPropsVariantOverrides {
@@ -14,49 +13,49 @@ declare module '@mui/material/Button' {
 }
 
 export const Button = styled(ButtonMUI)`
-  ${({ variant, size, disabled }) => css`
+  ${({ theme, variant, size, disabled }) => css`
     && {
       text-transform: none;
       border-radius: 12px;
 
       ${variant === 'primary' &&
       css`
-        background-color: ${colors.super300};
-        color: ${colors.super100};
+        background-color: ${theme.colors.super300};
+        color: ${theme.colors.super100};
         :hover {
-          background-color: ${colors.super800};
+          background-color: ${theme.colors.super800};
         }
       `}
 
       ${variant === 'secondary' &&
       css`
-        background-color: ${colors.super100};
-        color: ${colors.super300};
+        background-color: ${theme.colors.super100};
+        color: ${theme.colors.super300};
         :hover {
-          background-color: ${colors.super100};
-          color: ${colors.super800};
+          background-color: ${theme.colors.super100};
+          color: ${theme.colors.super800};
         }
       `}
 
       ${variant === 'text' &&
       css`
         background-color: transparent;
-        color: ${colors.super300};
+        color: ${theme.colors.super300};
         :hover {
           background-color: #0fae790a;
-          color: ${colors.super100};
+          color: ${theme.colors.super100};
         }
       `}
 
       ${variant === 'outlined' &&
       css`
         background-color: transparent;
-        color: ${colors.super300};
-        border: 1px solid ${colors.super300};
+        color: ${theme.colors.super300};
+        border: 1px solid ${theme.colors.super300};
 
         :hover {
           background-color: #0fae790a;
-          border: 1px solid ${colors.super800};
+          border: 1px solid ${theme.colors.super800};
         }
       `}
 
@@ -79,8 +78,8 @@ export const Button = styled(ButtonMUI)`
 
       ${disabled &&
       css`
-        background-color: ${colors.gray50};
-        color: ${colors.gray300} !important;
+        background-color: ${theme.colors.gray50};
+        color: ${theme.colors.gray200} !important;
       `}
     }
   `}
