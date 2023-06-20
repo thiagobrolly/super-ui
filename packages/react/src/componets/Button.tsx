@@ -43,8 +43,7 @@ export const Button = styled(ButtonMUI)`
         background-color: transparent;
         color: ${theme.colors.super300};
         :hover {
-          background-color: #0fae790a;
-          color: ${theme.colors.super100};
+          background-color: ${theme.colors.gray50};
         }
       `}
 
@@ -65,16 +64,19 @@ export const Button = styled(ButtonMUI)`
         padding: 8px 16px;
         font-size: 12px;
         border-radius: 8px;
+        height: 32px;
       `}
       ${size === 'medium' &&
       css`
         padding: 12px 24px;
         font-size: 16px;
+        height: 48px;
       `}
       ${size === 'large' &&
       css`
         padding: 16px 24px;
         font-size: 16px;
+        height: 56px;
       `}
 
       ${disabled &&
@@ -85,3 +87,10 @@ export const Button = styled(ButtonMUI)`
     }
   `}
 `;
+
+export type ButtonProps = {
+  variant: 'text' | 'primary' | 'secondary' | 'outlined';
+  size: 'small' | 'medium' | 'large';
+  disabled: false;
+  fullWidth: false;
+};

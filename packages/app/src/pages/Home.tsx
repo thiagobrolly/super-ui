@@ -11,6 +11,9 @@ export function Home() {
       <h1>App</h1>
       <div style={{ display: 'flex', gap: '10px', flexDirection: 'column' }}>
         <div style={{ display: 'flex', gap: '10px' }}>
+          <Button fullWidth size="small" variant="primary">
+            Full
+          </Button>
           <Button size="small" variant="primary">
             Label
           </Button>
