@@ -1,15 +1,22 @@
 import { Button } from '@super-ds/react';
 import { useTheme } from '@super-ds/theme';
+import { Container } from './styles';
 
 export function Home() {
   const { toggleTheme } = useTheme();
 
   return (
-    <div>
-      <button onClick={toggleTheme}>Click</button>
+    <Container>
+      <Button size="small" mb="50px" onClick={toggleTheme}>
+        Trocar thema
+      </Button>
 
       <h1>App</h1>
+
       <div style={{ display: 'flex', gap: '10px', flexDirection: 'column' }}>
+        <Button fullWidth size="medium" variant="primary">
+          Full
+        </Button>
         <div style={{ display: 'flex', gap: '10px' }}>
           <Button size="small" variant="primary">
             Label
@@ -70,6 +77,6 @@ export function Home() {
           </Button>
         </div>
       </div>
-    </div>
+    </Container>
   );
 }

@@ -1,0 +1,9 @@
+{
+  "extends": "@super-ds/eslint-config",
+  "overrides": [
+    {
+      "files": "*.mdx",
+      "extends": "plugin:mdx/recommended"
+    }
+  ]
+}
