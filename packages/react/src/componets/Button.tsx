@@ -1,5 +1,8 @@
 import styled, { css } from 'styled-components';
-import { Button as ButtonMUI } from '@mui/material';
+import {
+  Button as ButtonMUI,
+  ButtonProps as ButtonPropsUI,
+} from '@mui/material';
 
 declare module '@mui/material/Button' {
   // eslint-disable-next-line no-unused-vars
@@ -12,12 +15,44 @@ declare module '@mui/material/Button' {
   }
 }
 
-export const Button = styled(ButtonMUI)`
-  ${({ theme, variant, size, disabled }) => css`
+// type ButtonVariant = 'primary' | 'secondary' | 'text' | 'outlined';
+
+export interface ButtonProps extends ButtonPropsUI {
+  // variant?: ButtonVariant;
+  m?: string;
+  mx?: string;
+  my?: string;
+  mb?: string;
+  ml?: string;
+  mr?: string;
+  mt?: string;
+}
+
+export const Button = styled(ButtonMUI)<ButtonProps>`
+  ${({
+    theme,
+    variant = 'primary',
+    size = 'medium',
+    disabled,
+    m,
+    mx,
+    my,
+    mt,
+    ml,
+    mb,
+    mr,
+  }) => css`
     && {
       text-transform: none;
       border-radius: 12px;
       font-family: ${theme.fonts.default};
+      margin: ${m};
+      margin-top: ${mt || my};
+      margin-right: ${mr};
+      margin-bottom: ${mb || my};
+      margin-left: ${ml};
+      margin-inline-start: ${mx};
+      margin-inline-end: ${mx};
 
       ${variant === 'primary' &&
       css`
@@ -88,9 +123,4 @@ export const Button = styled(ButtonMUI)`
   `}
 `;
 
-export type ButtonProps = {
-  variant: 'text' | 'primary' | 'secondary' | 'outlined';
-  size: 'small' | 'medium' | 'large';
-  disabled: false;
-  fullWidth: false;
-};
+Button.displayName = 'Button';
