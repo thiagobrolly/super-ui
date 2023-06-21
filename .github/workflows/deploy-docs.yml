@@ -30,6 +30,9 @@ jobs:
   
   publish-storybook:
     needs: build-and-deploy
+
+    runs-on: ubuntu-latest
+
     steps:
       - name: Publish Storybook to GH Pages
         if: success()
