@@ -1,7 +1,6 @@
 {
   "name": "app",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev-app": "vite",
@@ -10,14 +9,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@super-ds/react": "*",
+    "@super-ds/theme": "*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^5.3.10"
   },
   "devDependencies": {
     "@super-ds/eslint-config": "*",
-    "@super-ds/react": "*",
-    "@super-ds/theme": "*",
     "@super-ds/tokens": "*",
     "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11",

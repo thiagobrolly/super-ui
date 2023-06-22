@@ -1,8 +1,8 @@
 {
   "name": "docs",
-  "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
@@ -10,7 +10,7 @@
     "deploy-storybook": "storybook-to-ghpages"
   },
   "keywords": [],
-  "author": "",
+  "author": "Thiago Sousa <thiago.sousa@superfrete.com>",
   "license": "ISC",
   "devDependencies": {
     "@storybook/addon-essentials": "^7.0.22",

@@ -3,6 +3,7 @@
   "license": "MIT",
   "private": true,
   "main": "index.js",
+  "author": "Thiago Sousa <thiago.sousa@superfrete.com>",
   "devDependencies": {
     "@thiagobrolly/eslint-config": "^1.0.0",
     "eslint": "^8.43.0"
