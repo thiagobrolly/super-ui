@@ -1,6 +1,7 @@
 {
   "name": "@super-ds/eslint-config",
   "license": "MIT",
+  "version": "0.0.0",
   "private": true,
   "main": "index.js",
   "author": "Thiago Sousa <thiago.sousa@superfrete.com>",

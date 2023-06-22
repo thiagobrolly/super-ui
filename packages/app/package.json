@@ -1,5 +1,5 @@
 {
-  "name": "app",
+  "name": "@super-ds/app",
   "private": true,
   "type": "module",
   "scripts": {

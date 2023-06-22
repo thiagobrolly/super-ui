@@ -1,5 +1,5 @@
 {
-  "name": "docs",
+  "name": "@super-ds/docs",
   "description": "",
   "main": "index.js",
   "private": true,
